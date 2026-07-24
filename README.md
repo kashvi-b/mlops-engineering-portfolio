@@ -1,228 +1,222 @@
 # 🚀 MLOps Engineering Portfolio
 
-A collection of production-ready MLOps projects demonstrating modern machine learning deployment, infrastructure automation, container orchestration, event-driven pipelines, and cloud-native AI applications.
+A collection of hands-on MLOps projects demonstrating machine learning deployment, containerization, infrastructure automation, event-driven systems, and Generative AI applications.
+
+---
 
 ## 📌 Overview
 
-This portfolio showcases real-world MLOps concepts including:
+This repository showcases practical implementations of modern MLOps concepts, including:
 
-- Model Serving with FastAPI
-- Kubernetes Deployments
+- ML Model Training & Serving
+- Docker Containerization
+- Kubernetes Deployment
 - Apache Kafka Streaming
 - Terraform Infrastructure as Code
-- AWS Bedrock Generative AI
-- Docker Containerization
-- Production-ready ML Deployment
+- LocalStack for Local AWS Development
+- Amazon Bedrock Integration
 
 ---
 
-## 🛠️ Tech Stack
-
-### Machine Learning
-- Python
-- Scikit-learn
-- FastAPI
-
-### MLOps
-- Docker
-- Kubernetes
-- Kafka
-- Terraform
-- LocalStack
-
-### Cloud
-- AWS Bedrock
-- AWS Services
-
-### DevOps
-- Git
-- GitHub
-- REST APIs
-
----
-
-# 📂 Projects
-
-## 1️⃣ Model Serving
-
-**Folder:** `serving/`
-
-Production-ready machine learning model deployment using FastAPI.
-
-### Features
-
-- REST API inference
-- Health check endpoints
-- Docker support
-- Production API structure
-
-**Concepts Covered**
-
-- Model Serving
-- API Deployment
-- Containerization
-- Inference Pipelines
-
----
-
-## 2️⃣ Kubernetes Deployment
-
-**Folder:** `kubernetes/`
-
-Deploy machine learning services on Kubernetes with scalable infrastructure.
-
-### Features
-
-- Deployments
-- Services
-- Scaling
-- Rolling Updates
-
-**Concepts Covered**
-
-- Kubernetes
-- Container Orchestration
-- Production Deployment
-- High Availability
-
----
-
-## 3️⃣ Kafka Streaming
-
-**Folder:** `kafka-streaming/`
-
-Real-time event streaming using Apache Kafka.
-
-### Features
-
-- Kafka Producer
-- Kafka Consumer
-- Streaming Pipelines
-- Event Processing
-
-**Concepts Covered**
-
-- Event Driven Architecture
-- Streaming ML
-- Kafka Brokers
-- Real-time Systems
-
----
-
-## 4️⃣ Terraform + LocalStack
-
-**Folder:** `terraform-localstack/`
-
-Infrastructure as Code for AWS resources using Terraform and LocalStack.
-
-### Features
-
-- Infrastructure Automation
-- AWS Resource Provisioning
-- Local AWS Development
-- Reproducible Infrastructure
-
-**Concepts Covered**
-
-- Terraform
-- Infrastructure as Code
-- DevOps Automation
-
----
-
-## 5️⃣ AWS Bedrock Explainer
-
-**Folder:** `bedrock-explainer/`
-
-Examples demonstrating Generative AI applications using Amazon Bedrock.
-
-### Features
-
-- Foundation Models
-- Prompt Engineering
-- LLM Applications
-- AI APIs
-
-**Concepts Covered**
-
-- Generative AI
-- Amazon Bedrock
-- Prompt Engineering
-- Large Language Models
-
----
-
-# 📁 Repository Structure
+# 📂 Repository Structure
 
 ```
 mlops-engineering-portfolio/
 │
-├── bedrock-explainer/
-├── kafka-streaming/
-├── kubernetes/
 ├── serving/
-├── terraform-localstack/
+│   ├── train.py
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
 │
-├── README.md
-└── .gitignore
+├── kubernetes/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── README.md
+│
+├── kafka-streaming/
+│   ├── producer.py
+│   ├── consumer.py
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── requirements.txt
+│
+├── terraform-localstack/
+│   ├── main.tf
+│   ├── docker-compose.yml
+│   └── README.md
+│
+├── bedrock-explainer/
+│   ├── explain.py
+│   ├── requirements.txt
+│   └── README.md
+│
+└── README.md
 ```
+
+---
+
+# 🛠 Technologies Used
+
+### Programming
+- Python
+
+### Machine Learning
+- Scikit-learn
+
+### MLOps & DevOps
+- Docker
+- Kubernetes
+- Apache Kafka
+- Terraform
+- LocalStack
+
+### Cloud & AI
+- Amazon Bedrock
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+# 📦 Projects
+
+## 1. Model Serving
+
+Location: `serving/`
+
+This project demonstrates how to train a machine learning model and expose it through a REST API.
+
+**Files**
+- `train.py` – Model training
+- `app.py` – API server
+- `Dockerfile` – Containerization
+
+**Concepts**
+- Model Training
+- Model Serving
+- REST APIs
+- Docker
+
+---
+
+## 2. Kubernetes Deployment
+
+Location: `kubernetes/`
+
+Deploy the machine learning service using Kubernetes manifests.
+
+**Files**
+- `deployment.yaml`
+- `service.yaml`
+
+**Concepts**
+- Kubernetes Deployments
+- Services
+- Container Orchestration
+
+---
+
+## 3. Kafka Streaming
+
+Location: `kafka-streaming/`
+
+A simple event-driven pipeline using Apache Kafka.
+
+**Files**
+- `producer.py`
+- `consumer.py`
+- `docker-compose.yml`
+- `Dockerfile`
+
+**Concepts**
+- Kafka Producer
+- Kafka Consumer
+- Real-time Streaming
+- Event-driven Architecture
+
+---
+
+## 4. Terraform + LocalStack
+
+Location: `terraform-localstack/`
+
+Provision AWS-like infrastructure locally using Terraform and LocalStack.
+
+**Files**
+- `main.tf`
+- `docker-compose.yml`
+
+**Concepts**
+- Infrastructure as Code
+- Terraform
+- LocalStack
+
+---
+
+## 5. Amazon Bedrock Explainer
+
+Location: `bedrock-explainer/`
+
+Demonstrates interaction with Amazon Bedrock foundation models.
+
+**Files**
+- `explain.py`
+
+**Concepts**
+- Generative AI
+- Amazon Bedrock
+- Prompt Engineering
 
 ---
 
 # 🎯 Skills Demonstrated
 
 - Machine Learning Deployment
-- Model Serving
-- Kubernetes
+- API Development
 - Docker
-- FastAPI
+- Kubernetes
 - Apache Kafka
 - Terraform
 - Infrastructure as Code
-- Cloud Computing
-- AWS Bedrock
-- REST APIs
+- Amazon Bedrock
 - Production MLOps
+- Cloud-native Development
 
 ---
 
 # 🚀 Getting Started
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/<your-username>/mlops-engineering-portfolio.git
 ```
 
-Navigate into the project
+Navigate to the project:
 
 ```bash
 cd mlops-engineering-portfolio
 ```
 
-Each project contains its own setup instructions and can be run independently.
+Each project folder contains its own README with setup and usage instructions.
 
 ---
 
 # 📚 Learning Objectives
 
-This repository is designed to demonstrate practical knowledge of:
+This repository was created to practice and demonstrate core MLOps skills, including:
 
-- Building production-ready ML APIs
-- Deploying services with Kubernetes
-- Streaming data using Kafka
-- Automating infrastructure with Terraform
-- Working with AWS Bedrock
-- Applying modern MLOps best practices
-
----
-
-# 🤝 Contributions
-
-This repository is maintained as a personal learning and portfolio project. Suggestions and improvements are welcome.
+- Serving machine learning models
+- Containerizing applications with Docker
+- Deploying workloads on Kubernetes
+- Building streaming pipelines with Kafka
+- Managing infrastructure using Terraform
+- Exploring Generative AI with Amazon Bedrock
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This repository is intended for educational and portfolio purposes.

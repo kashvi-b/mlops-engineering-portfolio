@@ -1,4 +1,3 @@
-cat > .github/workflows/serving-tests.yml <<'EOF'
 name: Serving API Tests
 
 on:
@@ -28,4 +27,3 @@ jobs:
       - name: Run serving API tests
         working-directory: serving
         run: python -m pytest -v
-EOF

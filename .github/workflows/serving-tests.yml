@@ -1,3 +1,4 @@
+
 name: Serving API Tests
 
 on:
@@ -27,3 +28,14 @@ jobs:
       - name: Run serving API tests
         working-directory: serving
         run: python -m pytest -v
+
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build serving Docker image
+        run: docker build -t mlops-serving:ci ./serving

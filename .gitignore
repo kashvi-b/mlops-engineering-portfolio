@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+
+# Trained model artifact (regenerated at docker build)
+model.pkl
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Secrets / local env
+.env
+*.local
+
+# OS
+.DS_Store

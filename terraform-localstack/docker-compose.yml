@@ -1,0 +1,12 @@
+name: terraform-localstack
+
+# LocalStack emulates AWS APIs locally so Terraform can really provision
+# resources (S3, DynamoDB) without a cloud account.
+services:
+  localstack:
+    image: localstack/localstack:3
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,dynamodb
+      DEBUG: "0"

@@ -1,0 +1,31 @@
+cat > .github/workflows/serving-tests.yml <<'EOF'
+name: Serving API Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: serving/requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r serving/requirements.txt
+
+      - name: Run serving API tests
+        working-directory: serving
+        run: python -m pytest -v
+EOF
